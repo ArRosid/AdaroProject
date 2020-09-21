@@ -1,4 +1,9 @@
 class MachineIncidentChoices:
+    machine_choices = (
+        ("machine1", "Machine 1"),
+        ("machine2", "Machine 2")
+    )
+
     shutdown_type = (
         ("fully_shutdown", "Fully Shutdown"),
         ("running_with_fail", "Running with Fail")

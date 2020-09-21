@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "app",
+    "widget_tweaks",
 ]
 
 MIDDLEWARE = [
@@ -122,4 +123,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-STATIC_ROOT = "static"
+# STATIC_ROOT = "static"
+
+LOGOUT_REDIRECT_URL = "LoginView"
+LOGIN_REDIRECT_URL = "MachineIncidentList"
+LOGIN_URL = "LoginView"

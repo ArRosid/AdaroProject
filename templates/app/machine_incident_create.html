@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="mt-4">Create a new Incident</h1>
+
+    <div class="card mt-4">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                {% include 'includes/form.html' %}
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(function () {
+            $("#id_start_time").datetimepicker({
+              format: 'Y-m-d H:i',
+            });
+        });
+        $(function () {
+            $("#id_end_time").datetimepicker({
+              format: 'Y-m-d H:i',
+            });
+        });
+    </script>
+{% endblock %}

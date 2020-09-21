@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <h1 class="mt-4 mb-2">Machine Incident Report</h1>
+
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Machine</th>
+                <th>Up Percent</th>
+                <th>Down Percent</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for d in data %}
+            <tr>
+                <td>{{ d.month }}</td>
+                <td>{{ d.machine }}</td>
+                <td>{{ d.up_percent }}</td>
+                <td>{{ d.down_percent }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+</table>
+{% endblock %}
+
+{% block js %}
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+{% endblock %}
