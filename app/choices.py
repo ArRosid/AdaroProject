@@ -1,7 +1,7 @@
 class MachineIncidentChoices:
     machine_choices = (
-        ("machine1", "Machine 1"),
-        ("machine2", "Machine 2")
+        ("CHPP Fix Plant", "CHPP Fix Plant"),
+        ("PORT Fix Plant", "PORT Fix Plant")
     )
 
     shutdown_type = (
